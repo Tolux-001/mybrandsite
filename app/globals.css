@@ -1,0 +1,105 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Titan-Nexus Theme: Soft Alabaster (Light Mode) */
+:root {
+  --background: #F5F5F0;
+  --foreground: #1C1C1E;
+  --card: #FFFFFF;
+  --card-foreground: #1C1C1E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1C1E;
+  --primary: #1C1C1E;
+  --primary-foreground: #F5F5F0;
+  --secondary: #E8E8E3;
+  --secondary-foreground: #1C1C1E;
+  --muted: #E8E8E3;
+  --muted-foreground: #6B6B6B;
+  --accent: #1C1C1E;
+  --accent-foreground: #F5F5F0;
+  --destructive: #DC2626;
+  --destructive-foreground: #FAFAFA;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: rgba(0, 0, 0, 0.1);
+  --ring: #1C1C1E;
+  --radius: 0.625rem;
+  
+  /* Titan-Nexus Custom Tokens */
+  --titan-gold: #1C1C1E;
+  --titan-emerald: #10B981;
+  --titan-glass: rgba(0, 0, 0, 0.05);
+  --titan-glass-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Titan-Nexus Theme: Deep Night (Dark Mode) */
+.dark {
+  --background: #0F172A;
+  --foreground: #F8FAFC;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #F8FAFC;
+  --popover: #1E293B;
+  --popover-foreground: #F8FAFC;
+  --primary: #D4AF37;
+  --primary-foreground: #020617;
+  --secondary: rgba(255, 255, 255, 0.1);
+  --secondary-foreground: #F8FAFC;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: #94A3B8;
+  --accent: #D4AF37;
+  --accent-foreground: #020617;
+  --destructive: #EF4444;
+  --destructive-foreground: #FAFAFA;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #D4AF37;
+  
+  /* Titan-Nexus Custom Tokens */
+  --titan-gold: #D4AF37;
+  --titan-emerald: #10B981;
+  --titan-glass: rgba(255, 255, 255, 0.05);
+  --titan-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-mono: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-titan-gold: var(--titan-gold);
+  --color-titan-emerald: var(--titan-emerald);
+  --color-titan-glass: var(--titan-glass);
+  --color-titan-glass-border: var(--titan-glass-border);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
